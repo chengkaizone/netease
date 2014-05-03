@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainClass!</string>
+    <string name="app_name">网易技术</string>
+    <string name="share_comment">分享</string>
+    <string name="copy_comment">复制</string>
+    <string name="reply_comment">回复</string>
+    <string name="reply_button">发表</string>
+    <string name="everyweek_comments_rank">本周排行</string>
+    <string name="everyday_comments_rank">今日排行</string>
+    <string name="top_comments">精彩跟帖</string>
+    <string name="comment_button">跟贴</string>
+    <string name="main_title_news">新闻</string>
+    <string name="original_button">原文</string>
+    <string name="main_title_comment">跟贴</string>
+</resources>

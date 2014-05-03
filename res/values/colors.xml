@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="text_color">#ff000000</color>
+	<color name="black">#ff191919</color>
+	<color name="white">#ffffffff</color>
+	<color name="gray">#cccccccc</color>
+	<color name="red">#ffff0000</color>
+	<color name="list_tag_color">#ffe5ebf4</color>
+	<color name="top_text_color">#ffe5ebf4</color>
+    <color name="night_top_text_color">#ff525252</color>
+    <color name="slider_front">#ffe5e7e9</color>
+    <color name="slider_back">#ff585d5e</color>
+    <color name="night_slider_front">#ff7c7c7c</color>
+    <color name="night_slider_back">#ff5a5d60</color>
+    <color name="main_title_color">#fff1f2f4</color>
+    <color name="main_bg_color">#ffecedee</color>
+    <color name="menu_text_color">#ff000000</color>
+    <color name="menu_layout_bg_color">#ffc9cccd</color>
+</resources>

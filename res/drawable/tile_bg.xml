@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 和设置背景效果一样但是这样跟节省内存资源 -->
+<bitmap
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:src="@drawable/login_bg"
+  android:tileMode="repeat"/>

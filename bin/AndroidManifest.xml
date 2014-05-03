@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="netease.cheng.main"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="5" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".WelcomeAct"
+        		android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<activity android:name=".VoteSubmit"
+		android:theme="@android:style/Theme.Dialog"/>
+		<activity android:name=".CommentNew"
+		android:theme="@android:style/Theme.NoTitleBar"/>
+		<activity android:name=".CommentPage"
+		android:theme="@android:style/Theme.NoTitleBar"/>
+		<activity android:name=".DetailPage"
+		android:theme="@android:style/Theme.NoTitleBar"/>
+		<activity android:name=".ImagePage"
+		android:theme="@android:style/Theme.NoTitleBar"/>
+		<activity android:name=".MainClass"
+		android:theme="@android:style/Theme.NoTitleBar"/>
+		<activity android:name=".TabTest"
+		android:theme="@android:style/Theme.NoTitleBar"/>
+		<activity android:name=".Topic"
+		android:theme="@android:style/Theme.NoTitleBar"/>
+		<activity android:name=".VotePage"
+		android:theme="@android:style/Theme.NoTitleBar"/>
+    </application>
+    <supports-screens 
+        android:anyDensity="false"
+        android:largeScreens="true"
+        />
+</manifest>

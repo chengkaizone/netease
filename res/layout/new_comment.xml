@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/new_comment_container"
+  android:background="#ffffffff"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <RelativeLayout
+  android:layout_width="fill_parent"
+  android:layout_height="40dip"
+  android:gravity="center_vertical">
+  	<include android:layout_width="fill_parent"
+  	android:layout_height="wrap_content" layout="@layout/top_title"/>
+  	<Button android:id="@+id/new_comment_btn1" android:background="@drawable/topcomment_column"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginRight="7.0dip" android:text="15跟帖"
+			android:textColor="#ffffffff"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+  	<Button android:id="@+id/new_comment_btn2" android:background="@drawable/topcomment_column"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginRight="7.0dip" android:text="原文"
+			android:textColor="#ffffffff" android:visibility="gone"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+  </RelativeLayout>
+  <FrameLayout
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:paddingTop="40dip"
+  android:paddingBottom="50dip"
+  android:paddingLeft="20dip"
+  android:paddingRight="20dip"
+  android:id="@+id/new_comment_root1"
+  >
+  <WebView
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/new_comment_web1"
+	android:scrollbars="none"/>
+  <WebView
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/new_comment_web2"
+	android:visibility="gone"
+	android:scrollbars="none"/>
+  </FrameLayout>
+  <FrameLayout
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:paddingTop="40dip"
+  android:paddingBottom="50dip"
+  android:visibility="gone"
+  android:id="@+id/new_comment_root2"
+  >
+  <ListView 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/new_comment_listview"
+		android:scrollbars="vertical" android:fadingEdge="none"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:listSelector="@drawable/listview_selector"
+		android:drawSelectorOnTop="false" android:cacheColorHint="#00000000"
+		android:divider="@drawable/list_divider_line"/>
+  </FrameLayout>
+  <include
+  android:layout_width="fill_parent"
+  android:layout_height="50dip"
+  layout="@layout/reply_frame"
+  android:layout_gravity="bottom"/>
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffecedee"
+    >
+    <include
+    android:id="@+id/main_in1" layout_width="fill_parent"
+    android:layout_height="wrap_content" layout="@layout/top_title"/>
+    <FrameLayout
+    android:background="@drawable/top_column_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+	<HorizontalScrollView
+	android:layout_width="fill_parent"
+	android:layout_height="40dip"
+	android:fadingEdge="vertical"
+	android:paddingLeft="9dip"
+	android:paddingRight="9dip"
+	android:id="@+id/main_horizontal"
+	android:scrollbars="none">
+        <FrameLayout android:paddingTop="7dip"
+        android:id="@+id/frameLayout1" android:layout_height="wrap_content" 
+        android:layout_width="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" 
+            android:src="@drawable/slidebar" android:layout_height="wrap_content" 
+            android:layout_width="wrap_content" android:id="@+id/main_frame_sliding"/> 
+            <LinearLayout android:layout_gravity="center_vertical"
+            android:id="@+id/linearLayout1" android:weightSum="6.0" 
+            android:layout_height="wrap_content" android:layout_width="fill_parent" 
+            android:orientation="horizontal">
+            </LinearLayout>
+        </FrameLayout>
+    </HorizontalScrollView>
+    <ImageButton
+    android:background="#00000000"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="2dip"
+    android:visibility="visible"
+    android:id="@+id/main_right"
+    android:layout_gravity="right|center"
+    android:src="@drawable/arr_right"/>
+    <ImageButton android:background="#00000000" android:layout_gravity="left|center" 
+    android:src="@drawable/arr_left" android:layout_height="wrap_content" 
+    android:id="@+id/main_left" android:visibility="visible" 
+    android:paddingLeft="2dip" android:layout_width="wrap_content"></ImageButton>
+    </FrameLayout>
+    <ViewFlipper
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/main_flipper"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+	android:paddingLeft="7.0dip" android:paddingTop="7.0dip"
+	android:paddingRight="7.0dip" android:paddingBottom="7.0dip"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView android:textAppearance="@style/topcomment_content_style"
+		android:textColor="#ff464646" android:id="@+id/top_comments_content"
+		android:background="@drawable/top_comment_bk" android:padding="4.0dip"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_margin="3.0dip" android:lineSpacingMultiplier="1.3" />
+	<RelativeLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:textAppearance="@style/comment_username_style"
+			android:id="@+id/top_comments_username" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+		<TextView android:textAppearance="@style/topcomment_desc_style"
+			android:textColor="#ff6c6c6c" android:id="@+id/top_comments_source"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_below="@id/top_comments_username"
+			android:layout_alignParentRight="true" />
+	</RelativeLayout>
+</LinearLayout>

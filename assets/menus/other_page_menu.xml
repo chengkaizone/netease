@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:gravity="bottom" android:id="@id/menu_child" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TableRow android:gravity="center_vertical" android:id="@id/menu_tabrow_1" android:background="#ffc9cccd" android:paddingTop="1.0dip" android:layout_height="65.0dip">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/menu_switch_city" android:background="@drawable/menu_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_change_city" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73.0dip" android:layout_height="wrap_content" android:text="@string/menu_change_city" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/menu_refresh" android:background="@drawable/menu_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_refresh" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73.0dip" android:layout_height="wrap_content" android:text="@string/menu_refresh" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/menu_selecttext" android:background="@drawable/menu_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_copy" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73.0dip" android:layout_height="wrap_content" android:text="@string/menu_select_text" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/menu_textsize" android:background="@drawable/menu_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_textsize" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73.0dip" android:layout_height="wrap_content" android:text="@string/menu_child_textsize" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/menu_logout" android:background="@drawable/menu_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_logout" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73.0dip" android:layout_height="wrap_content" android:text="@string/menu_logout" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/menu_delete" android:background="@drawable/menu_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_delete" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73.0dip" android:layout_height="wrap_content" android:text="@string/menu_child_delete" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/menu_default" android:background="@drawable/menu_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_default" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73.0dip" android:layout_height="wrap_content" android:text="@string/menu_child_default" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+    <ImageView android:background="@drawable/menu_top_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/menu_child" />
+</RelativeLayout>

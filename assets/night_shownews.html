@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="application/vnd.wap.xhtml+xml;charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css">
+            body {
+                margin: 0px 0px;
+                padding: 0;
+                line-height: 150%;
+                background: #141414;
+                word-wrap: break-word;
+            }
+            
+            .tCenter {
+                text-align: center
+            }
+            
+            .marTop2 {
+                margin-top: 2px
+            }
+            
+            .marTop6 {
+                margin-top: 6px
+            }
+            
+            .marTop10 {
+                margin-top: 10px
+            }
+            
+            .marTop20 {
+                margin-top: 20px
+            }
+            
+            .marTop30 {
+                margin-top: 30px
+            }
+            
+            .marTop50 {
+                margin-top: 50px
+            }
+            
+            .marLeft10 {
+                margin-left: 10px
+            }
+            
+            .marRight10 {
+                margin-right: 10px
+            }
+            
+            .marBottom50 {
+                margin-bottom: 45px
+            }
+            
+            .atitle {
+                color: #a5a5a5;
+                padding: 3px 0;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+            .atime {
+                color: #949494;
+                padding: 0px 0;
+                font-size: 12px;
+            }
+            
+            .viewMore {
+                margin: 20px 10px 0 10px;
+                text-align: center;
+            }
+            
+            .viewMore .viewMore-btn {
+                background: url("res/drawable-hdpi/arrowdown.png") no-repeat scroll right center transparent;
+                cursor: pointer;
+                left: 50%;
+                line-height: 21px;
+                margin: -10px 0 0 -30px;
+                padding-right: 18px;
+                position: absolute;
+                top: 50%;
+            }
+            
+            .viewMore .loading {
+                display: none;
+                cursor: pointer;
+                left: 50%;
+                line-height: 21px;
+                margin: -10px 0 0 -30px;
+                padding-right: 18px;
+                position: absolute;
+                top: 50%;
+            }
+            
+            .viewMore a {
+                -moz-border-radius: 4px 4px 4px 4px;
+                background: url("res/drawable-hdpi/view_more.png") repeat-x scroll left top transparent;
+                border: 1px solid #C2C2C2;
+                color: #484848;
+                display: block;
+                font-weight: 700;
+                height: 32px;
+                line-height: 32px;
+                outline: medium none;
+                position: relative;
+            }
+            
+            .loading {
+                text-align: center;
+            }
+			
+			.content {
+                color: #686868;
+                font-size: 18px;
+                padding: 0 10px 0 10px
+            }
+            
+            .content p {
+                margin: 3px 0;
+            }
+            
+            em {
+                font-style: normal;
+                font-weight: 400;
+            }
+            
+            a {
+                color: #000000;
+                text-decoration: none;
+            }
+            
+            img {
+                border: none;
+            }
+        </style>
+
+        <script type="text/javascript" src="jquery-1.4.4.min.js">
+        </script>
+        <script type="text/javascript">
+            var title;
+            var ptime;
+            var body;
+            var replyCount;
+            var replyBoard;
+            var source;
+            var more;
+            var moreButton;
+            var myBody;
+			var myTitle;
+			var myMore;
+            
+            function getTitle(){
+                myTitle = document.getElementById("title");
+                if (window.news) {
+                    title = window.news.getTitle();
+                    myTitle.innerHTML = title;
+                }
+            }
+            
+            function getSource(){
+                var mySource = document.getElementById('source');
+                if (window.news) {
+                    source = window.news.getSource();
+                    mySource.innerHTML = source;
+                }
+            }
+            
+            function getTime(){
+                var myTime = document.getElementById('ptime');
+                if (window.news) {
+                    ptime = window.news.getTime();
+                    myTime.innerHTML = ptime;
+                }
+            }
+            
+            function getBody(){
+                myBody = document.getElementById('article_body');
+                
+                if (window.news) {
+                    body = window.news.getBody();
+                }
+            }
+            
+            function getMore(){
+                moreButton.style.display = "none";
+                myMore = document.getElementById('more');
+                if (window.news) {
+                    more = window.news.getMoreBody();
+                    myMore.innerHTML = more+'<p>　　(完)</p>';
+                }
+                
+            }
+            
+            function toLink(i){
+            
+            	if(window.news){
+            		window.news.toLink(i);
+            	}
+            
+            }
+            
+            function zoomOut(i){
+                if (window.news) {
+                    window.news.showBigPic(i);
+                }
+            }
+            
+            function initialize(){
+            
+                getTitle();
+                getSource();
+                getTime();
+                getBody();
+                showMoreButton();
+            }
+            
+            function showMoreButton(){
+                moreButton = document.getElementById('moreButton');
+                
+                if (window.news) {
+                    var isShown = window.news.hasNext();
+                    
+                    if (isShown == 1) {
+                    	myBody.innerHTML = body;
+                        moreButton.style.display = "block";
+                    }
+                    else {
+                    	myBody.innerHTML = body+'<p>　　(完)</p>';
+                        moreButton.style.display = "none";
+                    }
+                }
+                else {
+                	myBody.innerHTML = body+'<p>　　(完)</p>';
+                    moreButton.style.display = "none";
+                }
+            }
+            
+            function over(obj){
+                var showmore = document.getElementById('showmore');
+                var loading = document.getElementById('loading');
+                
+                showmore.style.position = "relative";
+                showmore.style.top = 1;
+                showmore.style.left = 1;
+                
+                showmore.style.display = "none"
+                
+                loading.style.display = "block";
+                
+                if (window.news) {
+                    window.news.getMore();
+                }
+                
+            }
+            
+            function tiggerFullScreen(){
+                if (window.news) 
+                    window.news.triggerFullScreen();
+                
+            }
+            
+            function isLink(node){
+                var node = node;
+                while (node.nodeName != "A") {
+					
+                    if (node.nodeName == "HTML") 
+                        return false;
+                    node = node.parentNode;
+                }
+                return true;
+            }
+            
+			function clickEvent(){
+                if (isLink(event.target)) return;
+				else tiggerFullScreen();		
+            }
+			
+            document.addEventListener('click', clickEvent,  false);	
+            
+            function showSuperBigSize() {
+				myBody.style.fontSize = "26px";
+				myBody.style.lineHeight = "160%";
+				myMore.style.fontSize = "26px";
+				myMore.style.lineHeight = "160%";
+			}
+			
+			function showSuperBigSize4More() {
+				myMore.style.fontSize = "26px";
+				myMore.style.lineHeight = "160%";
+			}	
+			
+			function showBigSize() {
+				myBody.style.fontSize = "22px";
+				myBody.style.lineHeight = "160%";
+				myMore.style.fontSize = "22px";
+				myMore.style.lineHeight = "160%";
+			}
+			
+			function showMidSize() {
+				myBody.style.fontSize = "18px";
+				myBody.style.lineHeight = "150%";
+				myMore.style.fontSize = "18px";
+				myMore.style.lineHeight = "150%";
+			}
+			
+			function showSmallSize() {
+				myBody.style.fontSize = "16px";
+				myBody.style.lineHeight = "150%";
+				myMore.style.fontSize = "16px";
+				myMore.style.lineHeight = "150%";
+			}
+			
+			function showBigSize4More() {
+				myMore.style.fontSize = "22px";
+				myMore.style.lineHeight = "160%";
+			}
+			
+			function showMidSize4More() {
+				myMore.style.fontSize = "18px";
+				myMore.style.lineHeight = "150%";
+			}
+			
+			function showSmallSize4More() {
+				myMore.style.fontSize = "16px";
+				myMore.style.lineHeight = "150%";
+			}
+			
+            window.onload = function(){
+                initialize();
+            }
+        </script>
+    </head>
+    <body style="margin:0px; padding:0px;">
+        <center>
+            <div id="title" class="marRight10 marLeft10 marTop50 atitle ">
+            </div>
+            <div id="ptime" style="display:inline;" class="marLeft10 atime">
+            </div>&nbsp;&nbsp;
+            <div id="source" style="display:inline;" class="marRight10 atime">
+            </div>
+        </center>
+        <hr style="height:1px;border:0;border-bottom:1px dotted #464646;margin:4" />
+        <div id="article_body" class="content">
+        </div>
+        <div id="moreButton" class="viewMore marTop20 marBottom50" style="clear:both; display:none;">
+            <a href="javascript:;" hidefocus="true" onclick="over(this);">
+            	<em id="loading" class="loading">正在载入...</em>
+				<span id="showmore" class="viewMore-btn">查看全文</span>
+			</a>
+        </div>
+        <div id="more" class="content marBottom50">
+        </div>
+    </body>
+</html>
+

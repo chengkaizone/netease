@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <netease.cheng.widgets.VerticalScroll
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="#ffffffff">
+  <RelativeLayout
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <include
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  layout="@layout/refresh_item"
+  android:layout_alignParentBottom="true"  
+  />
+  <ImageView
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:layout_alignParentBottom="true"
+  android:src="@drawable/bottom_weight_bg"/>
+  </RelativeLayout>
+  
+  <ListView
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:cacheColorHint="#00000000"
+  android:footerDividersEnabled="true"
+  android:id="@+id/news_main_list"/>
+  </netease.cheng.widgets.VerticalScroll>
+</LinearLayout>

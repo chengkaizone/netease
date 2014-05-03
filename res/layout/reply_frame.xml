@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 用于被包含的底部控件  -->
+<LinearLayout android:gravity="center"
+	android:layout_gravity="bottom" android:orientation="horizontal"
+	android:id="@+id/reply_layout_frame" android:background="@drawable/reply_frame_bk"
+	android:visibility="gone" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout android:gravity="center"
+		android:layout_gravity="center" android:orientation="horizontal"
+		android:id="@+id/reply_edittext_layout" android:paddingTop="7.0dip"
+		android:paddingBottom="3.0dip" android:visibility="gone"
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<EditText android:id="@+id/reply_edittext"
+			android:layout_width="240.0dip" android:layout_height="wrap_content"
+			android:layout_marginLeft="3.0dip" android:maxLength="1000" />
+		<ImageView android:id="@+id/reply_frame_divider_img0"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip"
+			android:src="@drawable/reply_frame_divider" />
+		<Button android:id="@+id/reply_button" android:background="@drawable/netease_big_button"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginRight="7.0dip" android:text="@string/reply_button" />
+	</LinearLayout>
+	<LinearLayout android:gravity="center"
+		android:layout_gravity="center" android:orientation="horizontal"
+		android:id="@+id/reply_img_layout" android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<ImageButton android:id="@+id/reply_img_button"
+			android:background="#00000000" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="3.0dip"
+			android:src="@drawable/reply_editbox_bk" />
+		<ImageView android:id="@+id/reply_frame_divider_img1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="3.0dip" android:layout_marginRight="1.0dip"
+			android:src="@drawable/reply_frame_divider" />
+		<ImageButton android:id="@+id/reply_share_button"
+			android:background="#00000000" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/share_button_selector" />
+		<ImageView android:id="@+id/reply_frame_divider_img2"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="1.0dip" android:layout_marginRight="1.0dip"
+			android:src="@drawable/reply_frame_divider" />
+		<ImageButton android:id="@+id/reply_collect_button"
+			android:background="#00000000" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/collect_button_selector" />
+	</LinearLayout>
+</LinearLayout>

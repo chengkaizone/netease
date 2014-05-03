@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/top_background">
+  <ImageView android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:scaleType="fitCenter"
+  android:id="@+id/top_flag"
+  android:layout_centerVertical="true"
+  android:src="@drawable/netease_top"/>
+  <TextView
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_toRightOf="@id/top_flag"
+  android:layout_centerVertical="true"
+  android:id="@+id/top_title"
+  android:text="新闻"
+  android:textAppearance="@style/text_title"/>
+  <ProgressBar
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_centerVertical="true"
+  android:visibility="visible"
+  android:layout_toRightOf="@id/top_title"
+  android:id="@+id/top_progress"
+  style="@style/loadingbar"
+  android:layout_marginLeft="3dip"/>
+</RelativeLayout>

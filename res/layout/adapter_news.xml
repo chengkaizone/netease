@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+  <TextView
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:id="@+id/adapter_news_comment"
+  android:text="0跟帖"
+  android:textColor="#ffff0000"
+  android:layout_gravity="right|bottom"/>
+  <RelativeLayout android:layout_margin="5dip" android:id="@+id/relativeLayout1" android:layout_width="match_parent" android:layout_height="match_parent">
+      <ImageView android:layout_centerVertical="true" android:layout_width="50dip" android:padding="3dip" android:scaleType="fitCenter" android:layout_height="50dip" android:id="@+id/adapter_news_img"></ImageView>
+      <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_toRightOf="@id/adapter_news_img" android:orientation="vertical">
+          <TextView android:id="@+id/adapter_news_desc" android:singleLine="true" android:textColor="#ff191919" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="新闻简述"></TextView>
+          <TextView android:id="@+id/adapter_news_detail" android:paddingRight="40dip" android:textColor="#aa191919" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="新闻详情:sdk氟己定散那堪将凤女空手道" android:lines="2"></TextView>
+      </LinearLayout>
+  </RelativeLayout>
+  </FrameLayout>

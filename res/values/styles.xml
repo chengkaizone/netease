@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="comment_toolbar_style">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+	<style name="text_title">
+		<item name="android:textSize">18sp</item>
+		<item name="android:typeface">sans</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+	<style name="column_item_style">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/column_item_color</item>
+    </style>
+	<style name="topcomment_content_style">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="main_title_style">
+        <item name="android:textSize">19.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/main_title_color</item>
+    </style>
+    <style name="NeteaseSmallProgressBar">
+        <item name="android:maxWidth">20.0dip</item>
+        <item name="android:maxHeight">20.0dip</item>
+        <item name="android:indeterminateDrawable">@anim/loadingsmall</item>
+        <item name="android:minWidth">20.0dip</item>
+        <item name="android:minHeight">20.0dip</item>
+    </style>
+    <style name="column_title_style">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+    <style name="topcomment_desc_style">
+        <item name="android:textSize">11.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="comment_username_style">
+        <item name="android:textSize">11.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ff364b61</item>
+    </style>
+	<style name="loadingbar">
+		<item name="android:maxWidth">20.0dip</item>
+		<item name="android:minWidth">20.0dip</item>
+		<item name="android:maxHeight">20.0dip</item>
+		<item name="android:minHeight">20.0dip</item>
+		<item name="android:indeterminateDrawable">@anim/loadingbar</item>
+	</style>
+	<style name="loadingbarbig">
+		<item name="android:maxWidth">30.0dip</item>
+		<item name="android:minWidth">30.0dip</item>
+		<item name="android:maxHeight">30.0dip</item>
+		<item name="android:minHeight">30.0dip</item>
+		<item name="android:indeterminateDrawable">@anim/loadingbar</item>
+	</style>
+	<style name="menu_animation_previous" parent="@android:style/Animation">
+	<item name="android:windowEnterAnimation">@anim/menu_display_visible</item>
+	<item name="android:windowExitAnimation">@anim/menu_display_gone</item>
+	</style>
+	<style name="menu_animation" parent="@android:style/Animation">
+	<item name="android:windowEnterAnimation">@anim/anim_down_in</item>
+	<item name="android:windowExitAnimation">@anim/anim_down_out</item>
+	</style>
+</resources>

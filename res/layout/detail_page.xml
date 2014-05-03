@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:background="@drawable/tile_bg"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <include
+  android:id="@+id/detail_head"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  layout="@layout/top_title"/>
+	<TextView
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_below="@id/detail_head"
+	android:gravity="center"
+	android:id="@+id/detail_page_content"
+	android:text="sdk付款能收到甲方三大"
+	android:textColor="#ff191919"
+	android:padding="5dip"/>
+	<include
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	layout="@layout/reply_frame"/>
+	</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:gravity="bottom" android:id="@+id/menu_child" android:paddingTop="2dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TableRow android:gravity="center_vertical" android:id="@+id/menu_tabrow_1" android:background="#ffc9cccd" android:layout_height="65dp">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/menu_refresh" android:background="@drawable/menu_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:layout_weight="1.0">
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_refresh" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73dp" android:layout_height="wrap_content" android:text="刷新" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/menu_selecttext" android:background="@drawable/menu_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_copy" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73dp" android:layout_height="wrap_content" android:text="选择" />
+            </LinearLayout>
+        </TableRow>
+        <TableRow android:gravity="center_vertical" android:id="@+id/menu_tabrow_2" android:background="#ffc9cccd" android:paddingTop="1dp" android:layout_width="match_parent" android:layout_height="65dp">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/menu_textsize" android:background="@drawable/menu_background_below" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:layout_weight="1.0">
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_textsize" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73dp" android:layout_height="wrap_content" android:text="字体" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/menu_my_comment" android:background="@drawable/menu_background_below" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:layout_weight="1.0">
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_comment" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73dp" android:layout_height="wrap_content" android:text="评论" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/menu_my_collect" android:background="@drawable/menu_background_below" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_mycollect" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73dp" android:layout_height="wrap_content" android:text="收藏" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+    <ImageView android:background="@drawable/menu_top_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/menu_child" />
+</RelativeLayout>

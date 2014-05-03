@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:gravity="bottom" android:id="@id/top_menu_tablayout" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TableRow android:gravity="center_vertical" android:id="@id/menu_tabrow_1" android:background="@color/menu_layout_bg_color" android:paddingTop="1.0dip" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="65.0dip">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/menu_refresh" android:background="@drawable/menu_background_below" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_refresh" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73.0dip" android:layout_height="wrap_content" android:text="@string/menu_refresh" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/menu_my_comment" android:background="@drawable/menu_background_below" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1.0dip" android:layout_weight="1.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_comment" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73.0dip" android:layout_height="wrap_content" android:text="@string/menu_my_comment" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/menu_my_collect" android:background="@drawable/menu_background_below" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_mycollect" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73.0dip" android:layout_height="wrap_content" android:text="@string/menu_my_collect" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+    <ImageView android:background="@drawable/menu_top_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/top_menu_tablayout" />
+</RelativeLayout>

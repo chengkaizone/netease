@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:gravity="bottom" android:id="@+id/top_menu_tablayout" android:paddingTop="2dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TableRow android:gravity="center_vertical" android:id="@+id/menu_tabrow_1" android:background="@color/menu_layout_bg_color" android:paddingTop="1dp" android:paddingBottom="1dp" android:layout_width="match_parent" android:layout_height="42dp">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/menu_refresh" android:background="@drawable/menu_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:layout_weight="1.0">
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_refresh" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73dp" android:layout_height="wrap_content" android:text="刷新" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/menu_my_comment" android:background="@drawable/menu_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_comment" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73dp" android:layout_height="wrap_content" android:text="评论" />
+            </LinearLayout>
+        </TableRow>
+        <TableRow android:gravity="center_vertical" android:id="@+id/menu_tabrow_2" android:background="@color/menu_layout_bg_color" android:layout_width="match_parent" android:layout_height="42dp">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/menu_my_collect" android:background="@drawable/menu_background_below" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="1dp" android:layout_weight="1.0">
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_mycollect" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73dp" android:layout_height="wrap_content" android:text="收藏" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/menu_setting" android:background="@drawable/menu_background_below" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_menu_setting" />
+                <TextView android:textColor="@color/menu_text_color" android:gravity="center" android:layout_width="73dp" android:layout_height="wrap_content" android:text="设置" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+    <ImageView android:background="@drawable/menu_top_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/top_menu_tablayout" />
+</RelativeLayout>

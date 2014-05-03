@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:background="@drawable/picture_image_bg"
+  android:paddingLeft="15dip"
+  android:paddingRight="15dip"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  >
+  <ImageView
+  android:layout_width="150dip"
+  android:layout_height="160dip"
+  android:src="@drawable/bg1"
+  android:scaleType="fitCenter"
+  android:id="@+id/image_detail_img"
+  android:paddingBottom="15dip"/>
+  <TextView
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:paddingBottom="5dip"
+  android:layout_gravity="bottom|center"
+  android:id="@+id/image_detail_info"
+  android:text="图片说明"/>
+</FrameLayout>

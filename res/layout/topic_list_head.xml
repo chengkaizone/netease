@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="140dip"
+  >
+  <ImageView
+  android:layout_width="fill_parent"
+  android:layout_height="140dip"
+  android:id="@+id/topic_head"
+  android:background="@drawable/bg1"/>
+  <TextView
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:singleLine="true"
+  android:padding="3dip"
+  android:gravity="center_vertical"
+  android:background="@drawable/top_text_background"
+  android:layout_alignParentBottom="true"
+  android:text="杨澜：陈光标式慈善不可持续"/>
+  </RelativeLayout>
